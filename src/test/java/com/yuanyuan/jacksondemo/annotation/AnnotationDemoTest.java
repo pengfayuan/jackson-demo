@@ -28,6 +28,26 @@ class AnnotationDemoTest {
 
     @Test
     void testJsonAnyGetter() throws JsonProcessingException {
-        demo.testJsonAnyGetter();
+        demo.testJsonAnyGetterAndJsonAnySetter();
+    }
+
+    @Test
+    void testJsonGetterAndJsonSetter() throws JsonProcessingException {
+        demo.testJsonGetterAndJsonSetter();
+    }
+
+    @Test
+    void testJsonPropertyOrder() throws JsonProcessingException {
+        demo.testJsonPropertyOrder();
+    }
+
+    @Test
+    void testJsonRawValue() throws JsonProcessingException {
+        demo.testJsonRawValue();
+    }
+
+    @Test
+    void testJsonValue() throws JsonProcessingException {
+        demo.testJsonValue();
     }
 }

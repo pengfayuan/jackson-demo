@@ -3,7 +3,6 @@ package com.yuanyuan.jacksondemo.model;
 import cn.hutool.core.map.MapUtil;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonGetter;
 import java.util.Map;
 import lombok.ToString;
 
@@ -16,7 +15,6 @@ public class BillRequest {
 
     private int action;
 
-    @JsonAnySetter
     private Map<String, Object> extendInfo = MapUtil.newHashMap();
 
     public int getAction() {
@@ -32,8 +30,9 @@ public class BillRequest {
         return extendInfo;
     }
 
-//    public void setExtendInfo(String k, Object v) {
-//        extendInfo.put(k, v);
-//    }
+    @JsonAnySetter
+    public void setExtendInfo(String k, Object v) {
+        extendInfo.put(k, v);
+    }
 
 }
