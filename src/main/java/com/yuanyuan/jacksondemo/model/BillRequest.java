@@ -3,10 +3,7 @@ package com.yuanyuan.jacksondemo.model;
 import cn.hutool.core.map.MapUtil;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonGetter;
-
 import java.util.Map;
-
 import lombok.ToString;
 
 /**
