@@ -5,6 +5,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.yuanyuan.jacksondemo.model.BillRequest;
 import com.yuanyuan.jacksondemo.model.Person;
 import com.yuanyuan.jacksondemo.model.Student;
+import com.yuanyuan.jacksondemo.model.Teacher;
+
+import java.time.temporal.TemporalAdjuster;
 
 /**
  * @author FAYUAN.PENG
@@ -52,6 +55,16 @@ public class AnnotationDemo {
 
         String json = "{\"action\":1,\"uid\":\"169391\",\"callBack\":\"http://127.0.0.1\"}";
         System.out.println("pojo: " + mapper.readValue(json, BillRequest.class));
+    }
+
+    public void testJsonGetter() throws JsonProcessingException {
+        Teacher teacher = new Teacher();
+        teacher.setHolderName("yuanyuan");
+        System.out.println("json: " + mapper.writeValueAsString(teacher));
+
+        String json = "{\"name\":\"yuanyuan\"}";
+        Teacher t = mapper.readerFor(Teacher.class).readValue(json);
+        System.out.println("name:" + t.getHolderName());
     }
 
 

@@ -9,5 +9,5 @@
 jackson将json反序列化成对象时，默认使用无参构造函数，可以通过@JsonCreator指定默认的构造函数，构造函数的形参必须使用@JsonProperty注解
 
 ### @JsonAnyGetter
+1、序列化对象时，可以将map中的键值对转换成对象的基础属性
 
-1、用在方法上时

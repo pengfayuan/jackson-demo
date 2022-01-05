@@ -30,4 +30,9 @@ class AnnotationDemoTest {
     void testJsonAnyGetter() throws JsonProcessingException {
         demo.testJsonAnyGetter();
     }
+
+    @Test
+    void testJsonGetter() throws JsonProcessingException {
+        demo.testJsonGetter();
+    }
 }
